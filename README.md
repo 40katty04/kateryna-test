@@ -15,3 +15,5 @@ add it to .env FAST_FOREX_TRIAL_API_KEY
 # Run container
 
 ``` docker run -d -p 8000:80 -v .:/var/www/html genesis-test ```
+
+api can be reached on http://localhost:8000

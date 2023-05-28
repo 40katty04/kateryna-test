@@ -7,8 +7,16 @@ class CurrencyRateService
 {
     public static function getPrice()
     {
-        $price = 956745.21;
+        $client = new Client();
+        $key = env('FAST_FOREX_TRIAL_API_KEY');
 
-        return $price;
+        $result = $client->get('https://api.fastforex.io/fetch-one?from=BTC&to=UAH&api_key=' . $key , [
+            'headers' => [
+                'accept'=> 'application/json',
+            ],
+        ]);
+        $result = json_decode($result->getBody());
+
+        return $result->result->UAH;
     }
 }

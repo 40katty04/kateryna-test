@@ -7,7 +7,6 @@ use App\Services\CurrencyRateService;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 use Laravel\Lumen\Routing\Controller as BaseController;
-use App\Jobs\SendEmailJob;
 
 class Controller extends BaseController
 {
